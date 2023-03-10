@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:1150px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .row{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .justify-content-center{
+            justify-content:center;
+        }
+        .col-lg-3{
+            width:33.33333%;
+            padding:15px;
+        }
+        .col-lg-4{
+            width:25%;
+            padding:15px;
+        }
+        .col-lg-12{
+            width:100%;
+            padding:15px;
+        }
+        .row img{
+            max-width:100%;
+        }
+.pink{
+    margin-top:50px;
+    margin-bottom:50px;
+    background-color:rgb(253, 218, 224);
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.pink h1{
+    text-align:center;
+    font-size:80px;
+    color:rgba(0,0,0,0.5);
+}
+.listview>div{
+   margin-left:40px;
+   margin-right:40px;
+}
+.listbox{
+    width:40px;
+    height:40px;
+    background: url(../images/list03.svg) no-repeat;
+    cursor:pointer;
+}
+.listbox:hover{
+    background:rgb(253, 218, 224) url(../images/list03_hover.svg) no-repeat;
+}
+.box4
+{
+    width:40px;
+    height:40px;
+    background: url(images/list02.svg) no-repeat;
+    cursor:pointer;
+}
+.box4:hover{
+    background:rgb(253, 218, 224) url(images/list02_hover.svg) no-repeat;
+}
+.box3{
+    width:40px;
+    height:40px;
+    background: url(images/list01.svg) no-repeat;
+    cursor:pointer;
+}
+.box3:hover{
+    background:rgb(253, 218, 224) url(images/list01_hover.svg) no-repeat;
+}
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="row justify-content-center"> 
+            <h1 class="my-5 pt-5 pb-1 shoptitle">PRODUCT</h1>
+        </div>
+        <div class="row justify-content-center listview">   
+            <div class="listbox" onclick="vlist(12)"></div>
+            <div class="box4" onclick="vlist(4)"></div>
+            <div class="box3" onclick="vlist(3)"></div>
+        </div>
+        <div class="row listcontent">
+           <div class="col-lg-3 pd">
+             <img src="images/pd/024.jpg" alt="24">
+             <h1>상품이름</h1>
+             <p>상품설명</p>
+             <p>가격</p>
+           </div>
+           <div class="col-lg-3 pd">
+            <img src="images/pd/025.jpg" alt="24">
+            <h1>상품이름</h1>
+            <p>상품설명</p>
+            <p>가격</p>
+            </div>
+           <div class="col-lg-3 pd">
+            <img src="images/pd/026.jpg" alt="24">
+            <h1>상품이름</h1>
+            <p>상품설명</p>
+            <p>가격</p>
+            </div>
+            <div class="col-lg-3 pd">
+                <img src="images/pd/027.jpg" alt="24">
+                <h1>상품이름</h1>
+                <p>상품설명</p>
+                <p>가격</p>
+    </div>
+
+        </div>
+    </div>
+    <script>
+      function vlist(n){
+         const el = document.querySelectorAll(".pd");
+         el.forEach((items)=>{
+            items.classList.remove('col-lg-3', 'col-lg-4', 'col-lg-12');
+            items.classList.add('col-lg-'+n)
+            
+         });
+      }
+    </script>
+</body>
+</html>
