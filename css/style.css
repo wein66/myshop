@@ -650,3 +650,56 @@ ul.paging-img li.active{
 .box3:hover{
     background:rgb(253, 218, 224) url(../images/list01_hover.svg) no-repeat;
 }
+/**** 상품 디자인 ****/
+.pd-list{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+.pd-list li{
+    padding-top:4px;
+    padding-bottom:4px;
+}
+.pd-list li:first-child span{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    margin-right: 0 4px;
+}
+.gray{
+    background:gray;
+}
+.blue{
+    background:blue;
+}
+.black{
+    background:black;
+}
+.white{
+    border:1px solid #ddd;
+}
+.pd-title{
+   border-bottom:1px solid #e3e3e3;
+}
+.pd-title h1{
+    font-size:14px;
+}
+li del{
+    color:#999;
+}
+.pd-list p{
+  margin:0;
+  padding:0;
+}
+li.last span{
+   color:#c72b35;
+}
+li.last span{
+   padding-right:3px;
+}
+li.last span:not(:last-child)::after{
+    content:"/";
+    display:inline-block;
+    padding-left:6px;
+}
