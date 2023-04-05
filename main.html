@@ -220,259 +220,96 @@
             </div>
 
         </nav>
-
     </header>
-    
-    <!-- hero -->
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-lg-5 ovhidden">
-               <div class="img-slide fade">
-                 <img src="images/pd/001.jpg" alt="001">
-               </div>
-               <div class="img-slide fade">
-                 <img src="images/pd/002.jpg" alt="002">
-               </div>
-               <div class="img-slide fade">
-                 <img src="images/pd/003.jpg" alt="003">
-               </div>
-               <ul class="paging-img">
-                 <li class="active dot"></li>
-                 <li class="dot"></li>
-                 <li class="dot"></li>
-               </ul>
-            </div>
-            <div class="col-lg-7 shopstreet">
-                <img src="images/shop_street.jpg" alt="shopstreet" />
-            </div>
-        </div><!-- // row -->
-        <div class="row justify-content-center">
-            <h1 class="my-5 pt-5 pb-1 shoptitle">주간 BEST</h1>
-        </div>
-        <div class="row pt-5">
-            <ul class="best-tab justify-content-center">
-                <li class="tablinks active" onClick="openBest(event, 'best1')">원피스</li>
-                <li class="tablinks" onClick="openBest(event, 'best2')">아우터</li>
-                <li class="tablinks" onClick="openBest(event, 'best3')">상의</li>
-                <li class="tablinks" onClick="openBest(event, 'best4')">치마</li>
-                <li class="tablinks" onClick="openBest(event, 'best5')">바지</li>
-            </ul>
-            <!-- tabcontent -->
-            <div id="best1" class="besttabcontent">
-              <div class="row">
-                <!--loop -->
-                 <a href="main.html">
-                    <img src="images/pd/001.jpg" class="img-fluid" alt="001">
-                    <h2>어쩌구원피스</h2>
-                    <p>500원</p>
-                 </a>
-                 <a href="main.html">
-                    <img src="images/pd/002.jpg" class="img-fluid" alt="002">
-                    <h2>어쩌구원피스</h2>
-                    <p>500원</p>
-                 </a>
-                 <a href="main.html">
-                    <img src="images/pd/003.jpg" class="img-fluid" alt="003">
-                    <h2>어쩌구원피스</h2>
-                    <p>500원</p>
-                 </a>
-                 <a href="main.html">
-                    <img src="images/pd/004.jpg" class="img-fluid" alt="004">
-                    <h2>어쩌구원피스</h2>
-                    <p>500원</p>
-                 </a>
-                 <a href="main.html">
-                    <img src="images/pd/005.jpg" class="img-fluid" alt="005">
-                    <h2>어쩌구원피스</h2>
-                    <p>500원</p>
-                 </a>
-                 <!--/loop -->
-              </div>    
-            </div>
-            <div id="best2" class="besttabcontent">
+            <div class="col-lg-6">
                 <div class="row">
-                    <!--loop -->
-                     <a href="main.html">
-                        <img src="images/pd/006.jpg" class="img-fluid" alt="001">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/007.jpg" class="img-fluid" alt="002">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/008.jpg" class="img-fluid" alt="003">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/009.jpg" class="img-fluid" alt="004">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/010.jpg" class="img-fluid" alt="005">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <!--/loop -->
-                  </div>    
+                    <div class="bimgbox">
+                       <img src="images/pd/022.jpg" id="bimg" alt="01">
+                       <div class="best-rv d-flex">
+                           <div class="rv-star">
+                              <h5>리뷰평점</h5>
+                              <p>5.0</p>
+                              <p>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                              </p>
+                           </div>
+                           <div class="rv-pt">
+                             <div class="pt-in" id="ptIn">
+                                <a href="#" class="svbox"></a>
+                                <a href="#" class="svbox"></a>
+                                <a href="#" class="svbox"></a>
+                                <a href="#" class="svbox"></a>
+                                <a href="#" class="svbox"></a>
+                                <a href="#" class="svbox"></a>
+                                <a href="#" class="svbox"></a>
+                                <a href="#" class="svbox"></a>
+                             </div>   
+                           </div>
+                           <i id="btn-left" class="fa-solid fa-chevron-left"></i>
+                           <i id="btn-right" class="fa-solid fa-chevron-right"></i>
+                       </div>
+                    </div>
+                    <div class="simgbox">
+                        <img src="images/pd/001.jpg" class="simg" alt="01">
+                        <img src="images/pd/002.jpg" class="simg" alt="01">
+                        <img src="images/pd/003.jpg" class="simg" alt="01">
+                        <img src="images/pd/004.jpg" class="simg" alt="01">
+                    </div>
+                </div> 
             </div>
-            <div id="best3" class="besttabcontent">
-                <div class="row">
-                    <!--loop -->
-                     <a href="main.html">
-                        <img src="images/pd/011.jpg" class="img-fluid" alt="001">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/012.jpg" class="img-fluid" alt="002">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/013.jpg" class="img-fluid" alt="003">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/014.jpg" class="img-fluid" alt="004">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/015.jpg" class="img-fluid" alt="005">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <!--/loop -->
-                  </div>    
+            <div class="col-lg-6">
+                <form id="shopform" method="post">
+                    <ul class="mainProduct">
+                        <li class="subject"><h1>앙상블트위드원피스[55~77size가능]<span>신상10%</span></h1></li>
+                        <li><p>자켓 + 스커트 입은듯 입체감✔ 매력~ 단아함 물~씬 요조숙녀로 이미지 체인지 !</p></li>
+                        <li class="big"><label>판매가</label><del>91,000원</del></li>
+                        <li class="big"><label>할인판매가</label><strong>81,900원</strong><span class="salem"></span></li>
+                        <li class="big"><label>color</label>
+                                <label class="colors rgray"><input type="radio" class="color" name="color" value="회색" checked><span></span><p>회색</p></label>
+                                <label class="colors rblack"><input type="radio" class="color" name="color" value="검정색"><span></span><p>검정색</p></label>
+                                <label class="colors purple"><input type="radio" class="color" name="color" value="보라색"><span></span><p>보라색</p></label>
+                                <label class="colors pink"><input type="radio" class="color" name="color" value="핑크색"><span></span><p>핑크색</p></label>          
+                        </li>
+                        <li><label>size</label></li>
+                    </ul>
+                    <ul class="addProduct">
+                        <li class="title">
+                            <p>제목</p>
+                            <p class="option">옵션</p>
+                        </li>
+                        <li id="add">
+                           <div class="addbox">
+                               <span>0</span>
+                               <div class="pmbox">
+                                 <button class="up"><i class="fa-solid fa-angle-up"></i></button>
+                                 <button class="down"><i class="fa-solid fa-angle-down"></i></button>
+                               </div>
+                           </div>
+                        </li>
+                        <li id="remove">
+2
+                        </li> 
+                        <li id="totalP">
+3
+                        </li>
+                    </ul>    
+                            
+                    <div class="total">
+                        <label>총 상품금액<span>(수량)</span></label>
+                        <div>0<span>(0개)</span></div>
+                    </div>
+                </form>
             </div>
-            <div id="best4" class="besttabcontent">
-                <div class="row">
-                    <!--loop -->
-                     <a href="main.html">
-                        <img src="images/pd/016.jpg" class="img-fluid" alt="001">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/017.jpg" class="img-fluid" alt="002">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/018.jpg" class="img-fluid" alt="003">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/019.jpg" class="img-fluid" alt="004">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/020.jpg" class="img-fluid" alt="005">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <!--/loop -->
-                  </div>    
-            </div>
-            <div id="best5" class="besttabcontent">
-                <div class="row">
-                    <!--loop -->
-                     <a href="main.html">
-                        <img src="images/pd/021.jpg" class="img-fluid" alt="001">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/022.jpg" class="img-fluid" alt="002">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/023.jpg" class="img-fluid" alt="003">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/024.jpg" class="img-fluid" alt="004">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <a href="main.html">
-                        <img src="images/pd/025.jpg" class="img-fluid" alt="005">
-                        <h2>어쩌구원피스</h2>
-                        <p>500원</p>
-                     </a>
-                     <!--/loop -->
-                  </div>    
-            </div>
-        </div> 
-    </div><!--//container -->
-
-    <div class="container-fluid pinks">
-       <div class="container">
-           <h1>BANNER</h1>
-       </div>
-    </div>
-
-    <div class="container">
-        <div class="row justify-content-center"> 
-            <h1 class="my-5 pt-5 pb-1 shoptitle">PRODUCT</h1>
-        </div>
-        <div class="row justify-content-center listview mb-5">   
-            <div class="listbox"></div>
-            <div class="box4"></div>
-            <div class="box3"></div>
-        </div>
-
-        <div class="row mt-5" id="row">
-
-<!-- loop -->
-            <div class="col-lg-3 my-5">
-              <div class="card">
-                  <a href="main.html">
-                    <img src="images/pd/001.jpg" class="img-fluid" alt="001" />
-                  </a>
-                  <div class="card-body">
-                     <ul class="pd-list">
-                        <li>
-                            <span class="gray"></span>
-                            <span class="blue"></span>
-                            <span class="black"></span>
-                            <span class="white"></span>
-                        </li>
-                        <li class="pd-title">
-                            <h1>리듀트위트치마세트</h1>
-                        </li>
-                        <li>
-                            <del>140,000원</del>
-                            <br>
-                            <strong>133,000원</strong>
-                        </li>
-                        <li>
-                            <p>블링블링 화사한 봄🌸을 담은 트위드 셋업~ 생기 컬러감으로 미모 업그레이드 ♡</p>
-                        </li>
-                        <li class="last">
-                           <span>베스트셀러</span>
-                           <span>핫딜할인5%</span>
-                        </li>
-                     </ul> 
-                  </div>
-              </div>
-           </div>
-<!-- /loop -->
-
         </div>
     </div>
-
-<!--- footer -->
+   
+ <!--- footer -->
 <footer>
     <div class="container">
         <div class="row">
@@ -560,8 +397,7 @@
         </div>
     </div>
 </div>
-    <script src="js/index.js"></script>
     <script src="js/shop.js"></script>
-    <script src="js/shoplist.js"></script>
+    <!-- <script src="js/shoplist.js"></script> -->
 </body>
 </html>

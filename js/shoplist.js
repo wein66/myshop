@@ -7,7 +7,7 @@ fetch('./data/shoplist.json')
     for(let i = 0; i < rs.length; i++){
       div += `<div class="col-lg-3 my-5">
         <div class="card">
-            <a href="#">
+            <a href="main.html">
               <img src="${rs[i].img}" class="img-fluid" alt="${rs[i].img}" />
             </a>
             <div class="card-body">
@@ -42,6 +42,5 @@ fetch('./data/shoplist.json')
     }
 
     document.getElementById("row").innerHTML = div;
-
 })
 .catch((err)=> console.log(err));
