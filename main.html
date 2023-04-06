@@ -264,7 +264,7 @@
                 </div> 
             </div>
             <div class="col-lg-6">
-                <form id="shopform" method="post">
+                <form id="shopform" name="shopform" method="post">
                     <ul class="mainProduct">
                         <li class="subject"><h1>앙상블트위드원피스[55~77size가능]<span>신상10%</span></h1></li>
                         <li><p>자켓 + 스커트 입은듯 입체감✔ 매력~ 단아함 물~씬 요조숙녀로 이미지 체인지 !</p></li>
@@ -276,7 +276,12 @@
                                 <label class="colors purple"><input type="radio" class="color" name="color" value="보라색"><span></span><p>보라색</p></label>
                                 <label class="colors pink"><input type="radio" class="color" name="color" value="핑크색"><span></span><p>핑크색</p></label>          
                         </li>
-                        <li><label>size</label></li>
+                        <li class="big"><label>size</label>
+                            <label class="sizes m"><input type="radio" class="size" name="size" value="미디움" checked><p>미디움</p></label>
+                            <label class="sizes s"><input type="radio" class="size" name="size" value="스몰"><p>스몰</p></label>
+                            <label class="sizes l"><input type="radio" class="size" name="size" value="라지"><p>라지</p></label>
+                            <label class="sizes xl"><input type="radio" class="size" name="size" value="엑스라지"><p>엑스라지</p></label>
+                        </li>
                     </ul>
                     <ul class="addProduct">
                         <li class="title">
@@ -287,8 +292,8 @@
                            <div class="addbox">
                                <span>0</span>
                                <div class="pmbox">
-                                 <button class="up"><i class="fa-solid fa-angle-up"></i></button>
-                                 <button class="down"><i class="fa-solid fa-angle-down"></i></button>
+                                 <div class="up" onclick="updn(1)"><i class="fa-solid fa-angle-up"></i></div>
+                                 <div class="down" onclick="updn(-1)"><i class="fa-solid fa-angle-down"></i></div>
                                </div>
                            </div>
                         </li>
@@ -304,6 +309,10 @@
                         <label>총 상품금액<span>(수량)</span></label>
                         <div>0<span>(0개)</span></div>
                     </div>
+                    <input type="hidden" name="price" id="price" value="81900">
+                    <input type="hidden" name="title" id="title" value="앙상블트위드원피스">
+                    <input type="hidden" name="totalprice" id="totalprice">
+                    
                 </form>
             </div>
         </div>
