@@ -78,9 +78,26 @@
       }
    }
 
-
-
 }());
+
+
+
+
+function updn(i, n) {
+   var ct = parseInt(document.getElementsByClassName('ct')[i].value);
+   if(n > 0) {
+      if(ct <= 11) {
+          ct = ct + 1;
+      }
+   }else{
+      if(ct > 0) {
+         ct = ct - 1;
+      }
+   }
+   document.getElementsByClassName('ctv')[i].innerHTML = ct;
+   document.getElementsByClassName('ct')[i].value = ct;
+}
+
 
 function viewQuick(){
    document.getElementsByClassName('quick')[0].classList.toggle('action'); 

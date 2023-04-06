@@ -290,12 +290,13 @@
                         </li>
                         <li id="add">
                            <div class="addbox">
-                               <span>0</span>
+                               <span class="ctv">1</span>
                                <div class="pmbox">
-                                 <div class="up" onclick="updn(1)"><i class="fa-solid fa-angle-up"></i></div>
-                                 <div class="down" onclick="updn(-1)"><i class="fa-solid fa-angle-down"></i></div>
+                                 <div class="up" onclick="updn(0, 1)"><i class="fa-solid fa-angle-up"></i></div>
+                                 <div class="down" onclick="updn(0, -1)"><i class="fa-solid fa-angle-down"></i></div>
                                </div>
                            </div>
+                           <input type="hidden" name="ct[]" class="ct" value="1">
                         </li>
                         <li id="remove">
 2
