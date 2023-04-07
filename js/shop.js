@@ -4,12 +4,20 @@
    const close = document.getElementById('close');
    const changeImg = document.querySelectorAll('.simg');
    const size = document.shopform.size;
-   
+   const rootColors = document.getElementsByClassName('rootColors')[0];
+
    changeImg.forEach( function(el){
       el.addEventListener('mouseenter', function(event){
           const src = event.target.src;
           document.getElementById('bimg').src=src;
       });
+   });
+
+   //컬러 선택하면 size check 풀기
+   rootColors.addEventListener('click' , function(){
+       document.querySelectorAll('.size').forEach((v, i)=> {
+          v.checked = false;
+       });
    });
 
    //본문 주문 폼
@@ -20,10 +28,9 @@
           const selectColor = document.querySelector('.color:checked').value;
           const selectSize = document.querySelector('.size:checked').value;
           const addProduct = document.getElementById("addProduct");
-
-          let isAddProduct = document.getElementsByClassName("addProduct");
-          
+          let isAddProduct = document.getElementsByClassName("addProduct");        
           const colors = document.getElementsByClassName('color');
+
           let colorsIndex;
           let i;
 
@@ -38,39 +45,48 @@
           }
           
          //  const selectSizeCount = document.querySelectorAll('.size').findIndex(e=>e.checked);
-  
+         let addList = true;
          let count = 0;
          if(isAddProduct.length > 0) {
             count = isAddProduct.length;
          }
+         
+         document.querySelectorAll('.addProduct').forEach(function(v){
+             if("addProduct"+colorsIndex+sizesIndex == v.id) {
+                alert("같은 주문이 있습니다.");
+                addList = false;
+             }
+         });
 
-         //검증
+         if(addList){
 
-         let list = `<ul class="addProduct">
+         let list = `<ul class="addProduct" id="addProduct${colorsIndex}${sizesIndex}">
           <li class="title">
               <p>${selectTitle}</p>
               <p class="option">${selectColor} , ${selectSize}</p>
           </li>
           <li id="add">
              <div class="addbox">
-                 <span class="ctv">1</span>
+                 <span class="ctv" id="ctv${colorsIndex}${sizesIndex}">1</span>
                  <div class="pmbox">
-                   <div class="up" onclick="updn(${count}, 1)"><i class="fa-solid fa-angle-up"></i></div>
-                   <div class="down" onclick="updn(${count}, -1)"><i class="fa-solid fa-angle-down"></i></div>
+                   <div class="up" onclick="updn('${colorsIndex}${sizesIndex}', 1)"><i class="fa-solid fa-angle-up"></i></div>
+                   <div class="down" onclick="updn('${colorsIndex}${sizesIndex}', -1)"><i class="fa-solid fa-angle-down"></i></div>
                  </div>
              </div>
-             <span class="listclose"><i class="fa-solid fa-xmark"></i></span>
-             <input type="hidden" name="ct[]" class="ct" value="1">
+             <span class="listclose" onclick="closelist('${colorsIndex}','${sizesIndex}')"><i class="fa-solid fa-xmark"></i></span>
+             <input type="hidden" name="ct[]" class="ct" id="ct${colorsIndex}${sizesIndex}" value="1">
+             <input type="hidden" name="money[]" id="money${colorsIndex}${sizesIndex}" value="${selectPrice}" />
+             <input type="hidden" name="summoney[]" id="summoney${colorsIndex}${sizesIndex}" value="${selectPrice}" />
+           </li>
+          <li class="totalP" id="totalIP${colorsIndex}${sizesIndex}">
+               ${numComma(selectPrice)}원
           </li>
-          <li id="totalP">
-               ${selectPrice}원
-          </li>
-          <input type="hidden" class="rcolor" value="${colorsIndex}">
-          <input type="hidden" class="rsize" value="${sizesIndex}">
       </ul>`;
           const opt = addProduct.innerHTML;
           addProduct.innerHTML = opt + list;
-       });
+         }
+         
+       });  
    });
 
 
@@ -130,22 +146,38 @@
 
 }());
 
+//세자리 단위 콤마 찍는 정규식
+ const numComma = (value) => {
+   value = value.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+   return value;
+ }
 
+
+ //리스트 닫기
+ function closelist(m, n) {
+     document.getElementById('addProduct'+m+n).remove();
+ }
 
 
 function updn(i, n) {
-   var ct = parseInt(document.getElementsByClassName('ct')[i].value);
+   var ct = parseInt(document.getElementById('ct'+i).value);
+   var money = parseInt(document.getElementById('money'+i).value);
+   let summoney = 0;
    if(n > 0) {
       if(ct <= 11) {
           ct = ct + 1;
       }
    }else{
-      if(ct > 0) {
+      if(ct > 1) {
          ct = ct - 1;
       }
    }
-   document.getElementsByClassName('ctv')[i].innerHTML = ct;
-   document.getElementsByClassName('ct')[i].value = ct;
+   summoney = money*ct;
+
+   document.getElementById('summoney'+i).value = summoney;
+   document.getElementById('totalIP'+i).innerHTML = numComma(summoney)+"원";
+   document.getElementById('ctv'+i).innerHTML = ct;
+   document.getElementById('ct'+i).value = ct;
 }
 
 

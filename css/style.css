@@ -1100,7 +1100,7 @@ input[type=radio].size{
     font-size:18px;
     color:#999;
 }
-#totalP{
+.totalP{
     display:flex;
     justify-content: flex-end;
     align-items: center;
