@@ -19,7 +19,57 @@
           const selectPrice = document.getElementById("price").value;
           const selectColor = document.querySelector('.color:checked').value;
           const selectSize = document.querySelector('.size:checked').value;
-          console.log(selectTitle, selectPrice, selectColor, selectSize);
+          const addProduct = document.getElementById("addProduct");
+
+          let isAddProduct = document.getElementsByClassName("addProduct");
+          
+          const colors = document.getElementsByClassName('color');
+          let colorsIndex;
+          let i;
+
+          for(i = 0; i<colors.length; i++) {
+            if(colors[i].checked) colorsIndex = i;
+          }
+      
+          const sizes = document.getElementsByClassName('size');
+          let sizesIndex;
+          for(i = 0; i < sizes.length; i++) {
+            if(sizes[i].checked) sizesIndex = i;
+          }
+          
+         //  const selectSizeCount = document.querySelectorAll('.size').findIndex(e=>e.checked);
+  
+         let count = 0;
+         if(isAddProduct.length > 0) {
+            count = isAddProduct.length;
+         }
+
+         //검증
+
+         let list = `<ul class="addProduct">
+          <li class="title">
+              <p>${selectTitle}</p>
+              <p class="option">${selectColor} , ${selectSize}</p>
+          </li>
+          <li id="add">
+             <div class="addbox">
+                 <span class="ctv">1</span>
+                 <div class="pmbox">
+                   <div class="up" onclick="updn(${count}, 1)"><i class="fa-solid fa-angle-up"></i></div>
+                   <div class="down" onclick="updn(${count}, -1)"><i class="fa-solid fa-angle-down"></i></div>
+                 </div>
+             </div>
+             <span class="listclose"><i class="fa-solid fa-xmark"></i></span>
+             <input type="hidden" name="ct[]" class="ct" value="1">
+          </li>
+          <li id="totalP">
+               ${selectPrice}원
+          </li>
+          <input type="hidden" class="rcolor" value="${colorsIndex}">
+          <input type="hidden" class="rsize" value="${sizesIndex}">
+      </ul>`;
+          const opt = addProduct.innerHTML;
+          addProduct.innerHTML = opt + list;
        });
    });
 
@@ -62,14 +112,14 @@
    const btnLeft = document.getElementById("btn-left");
    const ptIn = document.getElementById("ptIn");
    let ps = 0;
-   btnRight.onclick = function(){
+   btnLeft.onclick = function(){
      ps = ptIn.offsetLeft;
      if(ps < 0) {
        ps += 50;
        ptIn.style.left = ps + "px";
      }  
    }
-   btnLeft.onclick = function(){
+   btnRight.onclick = function(){
       ps = ptIn.offsetLeft;
       if(ps > -200) {
          ps -= 50;

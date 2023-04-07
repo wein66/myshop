@@ -1092,3 +1092,18 @@ input[type=radio].size{
     line-height:1;
     padding:0;
  }
+ .listclose {
+    margin-left:10px;
+    cursor:pointer; 
+}
+.listclose i{
+    font-size:18px;
+    color:#999;
+}
+#totalP{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight:800;
+    font-size:15px;
+}
